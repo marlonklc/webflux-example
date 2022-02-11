@@ -1,0 +1,9 @@
+server:
+  port: 3000
+
+spring:
+  application:
+    name: webflux-example
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
