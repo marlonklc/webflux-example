@@ -6,6 +6,9 @@ public class SummaryResponse {
     private Long totalCustomers;
     private Long totalFoods;
 
+    public SummaryResponse() {
+    }
+
     public SummaryResponse(Long totalOrders, Long totalCustomers, Long totalFoods) {
         this.totalOrders = totalOrders;
         this.totalCustomers = totalCustomers;

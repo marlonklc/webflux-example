@@ -23,7 +23,7 @@ public class SummaryApi {
         this.objectMapper = objectMapper;
     }
 
-    @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    @GetMapping(path = "/events", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<SummaryResponse> listenSummary() {
         return Flux.interval(Duration.ofSeconds(3))
             .flatMap(i -> service.getSummary())

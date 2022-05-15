@@ -6,6 +6,7 @@ import com.webfluxexample.entity.Order;
 import com.webfluxexample.exception.OrderNotFoundException;
 import com.webfluxexample.repository.OrderRepository;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -47,4 +48,8 @@ public class OrderService {
             .map(OrderBuilder::build);
     }
 
+    public Flux<OrderDto> findAllByIdCustomer(String customerId) {
+        return repository.findAllByIdCustomer(customerId)
+            .flatMap(a -> composeDto(a.getIdFood(), a.getIdCustomer()));
+    }
 }

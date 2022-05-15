@@ -32,7 +32,7 @@ public class FoodApi {
     }
 
     @GetMapping("/{id}")
-    public Mono<FoodResponse> getOne(@PathVariable String id) {
+    public Mono<FoodResponse> get(@PathVariable String id) {
         return service.find(id)
             .map(food -> objectMapper.convertValue(food, FoodResponse.class));
     }
