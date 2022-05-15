@@ -6,7 +6,7 @@ The main apis of this repo is 'POST -> /orders' that is able to create an Order 
 If you look to OrderService and CustomerService classes you will find the some usages of Mono and Flux which is the propose of this repo.
 
 [link to OrderService class](https://github.com/marlonklc/webflux-example/blob/master/src/main/java/com/webfluxexample/service/OrderService.java) \
-[link to CustomerService class](https://github.com/marlonklc/webflux-example/blob/master/src/main/java/com/webfluxexample/service/CustomerService.java) \
+[link to CustomerService class](https://github.com/marlonklc/webflux-example/blob/master/src/main/java/com/webfluxexample/service/CustomerService.java)
 
 PS: I know that some implementations doesn't make sense on real life, think on implementation that was used of mono and flux, ok ?!
 
